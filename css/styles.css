@@ -1,11 +1,20 @@
-body
-{
+/* [DEFAULT] For Chrome and Opera */
+/* -ms- For Internet Edge and Explorer*/
+/* -webkit- For Safari */
+/* -moz- For Firefox */
+/* -khtml- For Konqueror HTML */
+
+body {
     background-color: aqua;
-    color:#E9AF00;
-    color:#450D21;
-    color:#F8FAFB;
-    color:#1C161B;
-    color:#EEEBEA;
+    color: #E9AF00;
+    color: #450D21;
+    color: #F8FAFB;
+    color: #1C161B;
+    color: #EEEBEA;
+}
+
+img {
+    pointer-events: none;
 }
 
 .backgroundImageContainer {
@@ -36,7 +45,7 @@ body
     display: flex;
     width: 300px;
     right: 100px;
-    filter: drop-shadow(2mm 4mm 3mm rgba(52, 52, 52, 0.65));    
+    filter: drop-shadow(2mm 4mm 3mm rgba(52, 52, 52, 0.65));
 }
 
 .titleText {
@@ -45,7 +54,7 @@ body
     left: 100px;
     bottom: 100px;
     width: 520px;
-    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-family: Futura, Trebuchet MS, Arial, sans-serif;
     color: #F8FAFB;
     font-size: 8rem;
     line-height: 3em;
@@ -61,32 +70,25 @@ body
     z-index: 1;
     left: 265px;
     bottom: 100px;
-    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-family: Futura, Trebuchet MS, Arial, sans-serif;
     font-size: 2rem !important;
     width: 200px;
     height: 60px;
     background-color: #E9AF00 !important;
     border-color: #E9AF00 !important;
     filter: drop-shadow(2mm 4mm 3mm rgba(52, 52, 52, 0.65));
-    
 }
 
-.seeMoreText {
-    /* visibility: hidden; */
-}
-
-@media screen and (max-width: 1025px){
+@media screen and (max-width: 1025px) {
     .logoImage {
         width: 150px;
     }
-    
     .titleText {
         left: 75px;
         bottom: 150px;
         width: 390px;
         font-size: 6rem;
     }
-    
     .homeJoinButton {
         left: 225px;
         bottom: 115px;
@@ -100,22 +102,21 @@ body
     .logoImage {
         display: inline-block;
         right: auto;
-        align-self: center;  
+        align-self: center;
+        top: 120px;
     }
-    
     .titleText {
         display: inline-block;
         position: relative;
         align-self: center;
-        top: -150px;
+        top: -170px;
         left: -10px;
     }
-    
     .homeJoinButton {
         align-self: center;
         font-size: 1.5rem !important;
         left: auto;
-        bottom: 75px;
+        bottom: 105px !important;
     }
 }
 
@@ -124,7 +125,6 @@ body
         left: 65px;
         font-size: 4rem;
     }
-    
     .homeJoinButton {
         left: auto;
         bottom: 75px;
@@ -138,36 +138,25 @@ body
     .backgroundImageContainer {
         top: -75px;
     }
-
     .homeJoinButton {
         left: 150px;
         bottom: 150px;
     }
-
     .titleText {
         left: 50px;
     }
-
     .logoImage {
         align-self: center;
         right: 20px;
         bottom: 70px;
         width: 150px;
     }
-
-    .seeMoreText {
-        visibility: visible;
-    }
 }
 
 @media screen and (max-height: 450px) and (max-width: 650px) {
     .homeJoinButton {
-        left: 150px;
-        bottom: 120px;
-    }
-
-    .seeMoreText {
-        visibility: visible;
+        left: 50px;
+        bottom: 150px;
     }
 }
 
@@ -175,6 +164,90 @@ body
     .logoImage {
         align-self: center;
         right: 50px;
-        bottom: 120px;
+        bottom: 170px;
     }
+}
+
+.arrow,
+.arrow:before {
+    position: absolute;
+    left: 50%;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    top: 380px;
+    margin: -20px 0 0 -20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    border-left: none;
+    border-top: none;
+    border-right: 5px #450D21 solid;
+    border-bottom: 5px #450D21 solid;
+    cursor: pointer;
+}
+  
+.arrow:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    margin: -10px 0 0 -10px;
+    border-left: none;
+    border-top: none;
+    border-right: 2px #E9AF00 solid;
+    border-bottom: 2px #E9AF00 solid;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-10px, -10px);
+    }
+    
+}
+
+@media screen and (max-height: 450px) {
+    .arrow {
+        top: 380px;
+    }
+    .arrowBackgroundCircle {
+        top: 380px;
+    }
+} 
+
+@media screen and (max-height: 375px) {
+    .arrow {
+        top: 101vh;
+    }
+    .arrowBackgroundCircle {
+        top: 96vh !important;
+    }
+} 
+
+.arrowBackgroundCircle {
+    position: absolute;
+    top: 360px;
+    z-index: 0.5;
+    height: 80px;
+    width: 80px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .select_disabled{
+    user-select: none;
+   -ms-user-select: none;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -khtml-user-select: none;
 }
