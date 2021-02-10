@@ -2,93 +2,258 @@
     <link href="styles.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="scripts.js"></script>
+    <script src="masonry.pkgd.js"></script>
 </head>
 <body style="background-color: #F8FAFB;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" >
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown link
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" >
+    <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-    <div class="background-container">
-        <img src="canyon-landscape-colorado-national-monument.jpg" class="mainimg" alt="..." >
-        <div class="containers">
+  <div class="background--container">
+      <img src="canyon-landscape-colorado-national-monument.jpg" class="background--image" alt="..." >
+      <div class="container--overlay">
         <div  class="text-and-image-container">
-            <div class="container">
-                <div class="row">
-                  <div class="col-sm">
-                    <h1 class="banner-pre-title inl" >WELCOME</h1> 
-                  </div>
-                  <div class="col-sm">
-                    <a class="btn btn-primary inl main-button-mover" href="#" role="button">Join Us</a>
-                  </div>
-                </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <h1 class="banner--title inl" >WELCOME</h1> 
               </div>
-           
-            
-        </div>
-        </div>
+              <div class="col-sm">
+                <a class="btn btn-primary inl btn-banner" href="#" role="button" onclick="">Join Us</a>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
-
-<div class="testcontainer">
-    <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-                <img src="Filler.jpg" class="card-img-top" alt="..." >
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text"> </p>
-                    <a href="https://masonry.desandro.com/" class="btn btn-primary">check out for more cards</a>
-                </div>
-            </div>
-          </div>
-          <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-                <img src="Filler.jpg" class="card-img-top" alt="..." >
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text"> </p>
-                    <a href="https://masonry.desandro.com/" class="btn btn-primary">check out for more cards</a>
-                </div>
-            </div>
-          </div>
-          <div class="col-sm">
-            <div class="card" style="width: 18rem;">
-                <img src="Filler.jpg" class="card-img-top" alt="..." >
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text"> </p>
-                    <a href="https://masonry.desandro.com/" class="btn btn-primary"> Test</a>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div> 
 </div>
 
+<div class="container--light">
+  <h1 class="textColorDark"> About the Club</h1>
+  <div class="grid" data-masonry='{ "columnWidth": 3, "itemSelector": ".grid-item","isFitWidth":"true" }'>
+    <div class="grid-item grid-item--height8 gridColorOffW">
+      <img src="Filler.jpg" class=" grid-image grid-image--height2-3Close" alt="..." >
+      <div class="text-item">
+        <center>
+          <H3>
+             Information Title
+          </H3>
+        </center>
+          <p>
+              this is a test to see the effects of a text implemented with image and button making this text look full
+          </p>
+      </div>
+      <center>
+        <button type="button" class="btn grid--button--inside btn-primary">link to something</button>
+    </center>
+    </div>
+    <div class="grid-item grid-item--height6 gridColorRed">
+      <div class="text-item textColorWhite">
+          <center>
+          <H4>
+              more realistic look
+          </H4>
+        </center>
+          <p>
+              this is a test to see the effects of a text implemented with image and with different hights and widths to see if 
+              any code needs to be added to acomadate for the spaceing and size of the cards and blocks 
+          </p>
+          <p>
+            as theres more paragraphs is a test to see the effects of a text implemented with image and with different hights and widths to see if 
+            any code needs to be added.
+        </p>
+      </div>
+    </div>
+    <div class="grid-item grid-item--height2 gridColorDark dispears" >
+      <div class="text-item textColorWhite">
+          <p class="addedPadding">
+              this is a test to see the effects of implemented will make the card disapear when it is compacted and how it will disapear if this information is unsessisary
+          </p>
+      </div>
+    </div>
+    <div class="grid-item grid-item--height2 gridColorOffW">
+      <div class="text-item">
+          <H3>
+            Title
+          </H3>
+          <H5>
+            this is a test to see the effects of implemented text and images
+          </H5>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="container--dark" >
+  <h1 class="textColorWhite"> Helping the Comunity</h1>
+  <div class="grid" data-masonry='{ "columnWidth": 3, "itemSelector": ".grid-item", "isFitWidth":"true"}'>
+    <div class="grid-item grid-item--height6 gridColorOffW">
+      <img src="Filler.jpg" class=" grid-image grid-image--height2-3Close" alt="..." >
+      <div class="text-item">
+        <center>
+          <H3>
+             Information Title
+          </H3>
+        </center>
+          <p>
+              this is a test to see the effects of a text implemented with image and button making this text look full
+              and this is all about nothing and making stuff up. 
+          </p> 
+      </div>
+    </div>
+    <div class="grid-item grid-item--height2 gridColorOffW">
+      <H3>
+        Information Title
+      </H3>
+      <p>
+        this is a test to see the effects of a text implemented with image and button making this text look full
+        and this is all about nothing. 
+      </p>
+    </div>
+    <div class="grid-item grid-item--height6 gridColorRed">
+      <img src="Filler.jpg" class=" grid-image grid-image--height2-3Close" alt="..." >
+      <div class="text-item textColorWhite">
+        <center>
+          <H3>
+             Information Title
+          </H3>
+        </center>
+          <p>
+              this is a test to see the effects of a text implemented with image and button making this text look full
+              and this is all about nothing and making stuff up. 
+          </p>
+      </div>
+    </div>
+    <div class="grid-item grid-item--height5 grid-image-holder gridColorOffW">
+      <img src="Filler.jpg" class=" grid-image grid-image--height2-3" alt="..." >
+      <div class="text-item">
+        <center>
+          <H3>
+             Information Title
+          </H3>
+        </center>
+          <p>
+              this is a test to see the effects of a text implemented with image and button making this text look full
+              and this is all about nothing and making stuff up. 
+          </p>
+      </div>
+    </div>
+    <div class="grid-item grid-item--height5 gridColorYellow"> 
+      <H4>
+        more realistic look
+      </H4>
+       <p>
+        this is a test to see the effects of a text implemented with image and with different hights and widths to see if 
+        any code needs to be added to acomadate for the spaceing and size of the cards and blocks r the 
+       </p>
+      <center>
+        <button type="button" class="btn grid--button--inside btn-secondary">link to something</button>
+      </center>
+    </div>
+    <div class="grid-item grid-item--height5 gridColorOffW">  
+      <img src="Filler.jpg" class=" grid-image grid-image--height3" alt="..." >
+      <div class="text-item">
+        <center>
+          <H3>
+             Information Title
+          </H3>
+        </center>
+          <p>
+              this is a test to see the effects of a text implemented with image and making it look good with styles and contrast
+          </p> 
+      </div>
+    </div>
+    <div class="grid-item gridColorOffW">
+      <p>
+        this is a test to see the effects of a text implemented with image and button making this text look full
+        
+      </p> 
+    </div>
+  </div>
+  <br>
+</div>
+<div class="container--light">
+  <div class="grid" data-masonry='{ "columnWidth": 3, "itemSelector": ".grid-item", "isFitWidth":"true" }'>
+    <img src="Filler.jpg" class=" grid-item  grid-item--height5 dispears" alt="..." >
+    <div class="grid-item grid-item--height6 grid-image-holder2 gridColorOffW">
+      <img src="Filler.jpg" class=" grid-image  grid-image--height2" alt="..." >
+      <H4>
+        Something Eye Catching
+      </H4>
+       <p>
+        this is a test to see the effects of a text implemented with image and with different hights and widths to see if 
+        any code needs to be added to acomadate 
+       </p>
+    </div>
+    <img src="Filler.jpg" class=" grid-item  grid-item--height3 dispears" alt="..." >
+    <div class="grid-item grid-item--text gridColorOffW dispears">
+      <p>
+        as theres more paragraphs is a test to see the effects of a text implemented with image and with 
+    </p>
+    </div>
+    <div class="grid-item grid-item--height4 gridColorDark">
+      <div class="text-item textColorWhite">
+        <H4>
+         more realistic look
+       </H4>
+        <p>
+         this is a test to see the effects of a text implemented with image and with different hights and widths to see if 
+         any code needs to be added to acomadate for the spaceing and size of the cards and blocks r the spaceing and size of the cards
+        </p>
+      </div>
+      <button type="button" class="btn grid--button--left btn-primary">link to something</button>
+    </div>
+    <div class="grid-item grid-item--height5 gridColorRed">
+      <div class="text-item textColorWhite">
+        <H4>
+         more realistic look
+       </H4>
+        <p>
+         this is a test to see the effects of a text implemented with image and with different hights and widths to see if 
+         any code needs to be added to acomadate for the spaceing and size of the cards and blocks r the spaceing and size of the cards
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container--dark">
+  <div class="grid" data-masonry='{ "columnWidth": 3, "itemSelector": ".grid-item", "isFitWidth":"true" }'>
+    <div class="grid-item grid-item--height5 gridColorOffW dispears2">
+      <img src="Filler.jpg" class=" grid-image" alt="..." >
+    </div>
+    <div class="grid-item grid-item--height5 grid-item--width2 gridColorOffW">
+      <H4>
+        more realistic look
+      </H4>
+      <div class="columns">
+        <p>
+          this is a test to see the effects of a text implemented with image and with different hights and widths to see if 
+          any code needs to be added to acomadate for the spaceing and size of the cards and this is a test to see the effects of a text implemented with image and with different hights and widths to see if 
+          any code needs
+        </p>
+        <p>
+          this is a test to see the effects of a text implemented with image and with different hights and widths to see if 
+          any code needs to be added to acomadate for the spaceing and size of the cards and this is a test to see
+        </p>
+        <button type="button" class="btn grid--button--inside btn-secondary">link to something</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container--footer">
+</div>
 </body>
