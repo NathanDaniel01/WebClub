@@ -118,6 +118,7 @@ img {
         right: auto;
         align-self: center;
         top: 120px;
+        width: 125px;
     }
     .titleText {
         display: inline-block;
@@ -130,7 +131,7 @@ img {
         align-self: center;
         font-size: 1.5rem !important;
         left: auto;
-        bottom: 105px !important;
+        bottom: 145px !important;
     }
 }
 
@@ -162,8 +163,8 @@ img {
     .logoImage {
         align-self: center;
         right: 20px;
-        bottom: 70px;
-        width: 150px;
+        bottom: 120px;
+        width: 125px;
     }
 }
 
@@ -229,21 +230,24 @@ img {
     
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 495px) {
     .arrow {
-        top: 380px;
+        top: 340px;
     }
     .arrowBackgroundCircle {
-        top: 380px;
+        top: 320px !important;
+    }
+    .homeJoinButton {
+        bottom: 170px;
     }
 } 
 
-@media screen and (max-height: 375px) {
+@media screen and (max-height: 415px) {
     .arrow {
-        top: 101vh;
+        top: 83vh;
     }
     .arrowBackgroundCircle {
-        top: 96vh !important;
+        top: 78vh !important;
     }
 } 
 

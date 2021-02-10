@@ -9,6 +9,7 @@
 }
 
 .navTextContainer {
+    z-index: -3;
     position: relative;
     display: inline-block;
     animation-name: slide;
@@ -16,7 +17,6 @@
 }
 
 .navTextContainer a {
-    z-index: 1;
     float: left;
     margin-left: 3px;
     margin-right: 3px;
@@ -71,6 +71,15 @@
     height: 100%;
 }
 
+.parallelogramHolder {
+    position: relative;
+    height: 100%;
+    z-index: 4;
+    background-color: #515151;
+    float: left;
+    transform: skew(-20deg);
+}
+
 .parallelogram1 {
     z-index: 3;    
     float: left;
@@ -78,7 +87,6 @@
     margin-right: 2px;
     width: 15px;
     height: 100%;
-    transform: skew(-20deg);
     background: #ffd200;
 }
 
@@ -89,7 +97,6 @@
     margin-right: 2px;
     width: 30px;
     height: 100%;
-    transform: skew(-20deg);
     background: #860037;
 }
 
@@ -99,28 +106,7 @@
     margin-left: 2px;
     width: 15px;
     height: 100%;
-    transform: skew(-20deg);
     background: #ffd200;
-}
-
-#navAnimation1 {
-    animation-name: slideButton1;
-    animation-duration: 2s;
-}
-
-#navAnimation2 {
-    animation-name: slideButton2;
-    animation-duration: 2s;
-}
-
-#navAnimation3 {
-    animation-name: slideButton3;
-    animation-duration: 2s;
-}
-
-#navAnimation4 {
-    animation-name: slideButton4;
-    animation-duration: 2s;
 }
 
 @keyframes slide {
@@ -128,54 +114,12 @@
         left: -600px;
     }
     90% {
-        visibility: visible;
     } 
     100% {
         left: 0px;
     }
 }
 
-@keyframes slideButton1 {
-    0% {
-        visibility: hidden;
-    }
-    90% {
-        visibility: hidden;
-    } 
-    100% {
-        visibility: visible;
-    }
-}
-
-@keyframes slideButton2 {
-    0% {   
-        visibility: hidden;
-    }
-    80% {
-        visibility: hidden;
-    } 
-    100% {
-        visibility: visible;    }
-}
-
-@keyframes slideButton3 {
-    0% {       
-        visibility: hidden;
-    }
-    70% {
-        visibility: hidden;
-    } 
-    100% {
-        visibility: visible;    }
-}
-
-@keyframes slideButton4 {
-    0% {
-        visibility: hidden;
-    }
-    60% {
-        visibility: hidden;
-    } 
-    100% {
-        visibility: visible;    }
+@media screen and (max-width: 545px) {
+    
 }
