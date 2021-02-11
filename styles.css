@@ -159,24 +159,28 @@ body
   max-width: 1200px;
     margin: 0 auto;
 }
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: bo
+  th;
+}
+/* ---- grid-colors ----*/
 
 .gridColorRed { background: #450D21;}
 .gridColorDark { background: #1C161B;}
 .gridColorOffW {background: #EEEBEA;}
 .gridColorWhite{ background: #F8FAFB;}
 .gridColorYellow { background: #E9AF00;}
+
+/* ---- text-colors ----*/
+
 .textColorRed {color: #450D21;}
 .textColorDark {color: #1C161B;}
 .textColorOffW {color: #EEEBEA;}
 .textColorWhite{color: #F8FAFB;}
 .textColorYellow {color: #E9AF00;}
-
-/* clearfix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
 
 /* ---- grid-item ---- */
 
@@ -240,9 +244,10 @@ body
 {
   display: block !important;
   margin-top: 1.7rem !important;
-  width: 10rem; height: 2.5rem;
+  width: 10rem; height: 3rem;
   filter: drop-shadow(2mm 4mm 3mm #3434342c);
   margin-left: 1rem;
+  font-size: 1rem !important;
 }
 .grid--button--inside
 {
@@ -272,10 +277,7 @@ p
    padding-left: .75rem;
    padding-right: .5rem;
 }
-.addedPadding
-{
-    padding-top: .5rem;
-}
+
 h1
 {
     font-family: Trade Gothic LT Bold,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;

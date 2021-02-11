@@ -1,7 +1,3 @@
-function onclick()
-{
-    alert("AHHHH!");
-};
 //external js: masonry.pkgd.js
 var elem = document.querySelector('.grid');
 var msnry = new Masonry( elem, {
