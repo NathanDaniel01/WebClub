@@ -51,7 +51,7 @@ img {
     object-fit: cover;
     display: flex;
     width: 300px;
-    right: 100px;
+    right: 80px;
     filter: drop-shadow(2mm 4mm 3mm rgba(52, 52, 52, 0.65));
 }
 
@@ -88,9 +88,7 @@ img {
 }
 
 .homeJoinButton:hover {
-    background-color: #860037 !important;
-    color: #ffd200 !important;
-    border-color: #ffd200 !important;
+    background-color: #dbb300 !important;
 }
 
 @media screen and (max-width: 1025px) {
@@ -99,13 +97,13 @@ img {
     }
     .titleText {
         left: 75px;
-        bottom: 150px;
+        bottom: 110px;
         width: 390px;
         font-size: 6rem;
     }
     .homeJoinButton {
         left: 225px;
-        bottom: 115px;
+        bottom: 75px;
         font-size: 1.5rem !important;
         width: 125px;
         height: 45px;
@@ -117,21 +115,21 @@ img {
         display: inline-block;
         right: auto;
         align-self: center;
-        top: 120px;
+        top: 160px;
         width: 125px;
     }
     .titleText {
         display: inline-block;
         position: relative;
         align-self: center;
-        top: -170px;
+        top: -130px;
         left: -10px;
     }
     .homeJoinButton {
         align-self: center;
         font-size: 1.5rem !important;
         left: auto;
-        bottom: 145px !important;
+        bottom: 105px !important;
     }
 }
 
@@ -238,16 +236,16 @@ img {
         top: 320px !important;
     }
     .homeJoinButton {
-        bottom: 170px;
+        bottom: 130px;
     }
 } 
 
-@media screen and (max-height: 415px) {
+@media screen and (max-height: 375px) {
     .arrow {
-        top: 83vh;
+        top: 100vh;
     }
     .arrowBackgroundCircle {
-        top: 78vh !important;
+        top: 95vh !important;
     }
 } 
 
@@ -262,7 +260,7 @@ img {
     cursor: pointer;
   }
 
-  .select_disabled{
+  .select_disabled {
     user-select: none;
    -ms-user-select: none;
    -webkit-user-select: none;

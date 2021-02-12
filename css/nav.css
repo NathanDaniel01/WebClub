@@ -1,18 +1,26 @@
 .navBarContainer {
-    position: sticky;
-    z-index: 2;
-    background-color: #515151;
+    position: fixed !important;
+    z-index: 100;
+    background: #515151;
     color: #ffd200;
     width: 100%;
     height: 50px;
     overflow: hidden;
 }
 
-.navTextContainer {
-    z-index: -3;
+.navRightContainer {
     position: relative;
-    display: inline-block;
-    animation-name: slide;
+    float: right;
+    right: 10px;
+    animation-name: slideRight;
+    animation-duration: 2.5s;
+}
+
+.navTextContainer {
+    position: relative;
+    float: left;
+    left: 6px;
+    animation-name: slideLeft;
     animation-duration: 2s;
 }
 
@@ -32,6 +40,10 @@
     transform: skewX(-20deg);
 }
 
+.navTextContainer a.active {
+    background-color: #373737;
+}
+
 .navContainerSlantedText {
     -ms-transform: skewX(20deg);
     -webkit-transform: skewX(20deg);
@@ -40,17 +52,10 @@
 }
 
 .navTextContainer a:hover {
-    background-color: #ffd200;
     color: #860037;
 }
 
-.navTextContainer a.active {
-    z-index: 1 !important;
-    background-color: #373737;
-}
-
 .navTextContainer a.active:hover {
-    background-color: #860037;
     color: #ffd200;
 }
 
@@ -64,20 +69,21 @@
 }
 
 .spacer1 {
-    z-index: 3;
+    z-index: 4;
+    content: ' ';
     float: left;
-    background-color: #515151;
+    background: #515151;
     width: 150px;
     height: 100%;
+    cursor: pointer;
 }
 
 .parallelogramHolder {
     position: relative;
     height: 100%;
     z-index: 4;
-    background-color: #515151;
+    background: #515151;
     float: left;
-    transform: skew(-20deg);
 }
 
 .parallelogram1 {
@@ -88,6 +94,7 @@
     width: 15px;
     height: 100%;
     background: #ffd200;
+    transform: skew(-20deg);
 }
 
 .parallelogram2 {
@@ -98,6 +105,7 @@
     width: 30px;
     height: 100%;
     background: #860037;
+    transform: skew(-20deg);
 }
 
 .parallelogram3 {
@@ -107,17 +115,101 @@
     width: 15px;
     height: 100%;
     background: #ffd200;
+    transform: skew(-20deg);
 }
 
-@keyframes slide {
+.profileButton {
+    position: relative;
+    float: right;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffd200;
+    border-radius: 22.5px;
+    top: 5px;
+    align-content: center;
+}
+
+.profileButton:hover {
+    border-color: #860037;
+    background-color: #717171;
+}
+
+.signUpButton {
+    position: relative;
+    align-content: center;
+    float: right !important;
+    z-index: 3;
+    top: 7.5px;
+    width: 85px;
+    height: 35px;
+    color: #860037 !important;
+    background-color: #ffd200 !important;
+    border: 1px solid #860037 !important;
+}
+
+.signUpButton:hover {
+    background-color: #dbb300 !important;
+}
+
+.signUpIcon {
+    position: relative;
+    z-index: 3;
+    right: -2px;
+}
+
+.displayHidden {
+    display: none !important;
+}
+
+@keyframes slideLeft {
     0% {
         left: -600px;
+        z-index: -10;
     }
     90% {
+        z-index: -10;
     } 
     100% {
-        left: 0px;
+        left: 6px;
+        z-index: 100;
     }
+}
+
+@keyframes slideRight {
+    0% {
+        right: -600px;
+        z-index: -10;
+    }
+    90% {
+        z-index: -10;
+    } 
+    100% {
+        right: 10px;
+        z-index: 100;
+    }
+}
+
+div.pullRight a:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    content: '';
+    background: #ffd200;
+    transition: all 0.3s;
+}
+
+div.pullRight a.active:before
+{
+    background: #860037;
+}
+
+div.pullRight a:hover:before
+{
+    width: 100%;
 }
 
 @media screen and (max-width: 545px) {
